@@ -20,7 +20,7 @@ jobs:
       run: docker build -t ${{ "AMOGHAJOSHI" }}/devops-app:latest .
 
     - name: Push Image
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-app:latest
+      run: docker push ${{AMOGHAJOSHI}}/devops-app:latest
 
     - name: Configure AWS
       uses: aws-actions/configure-aws-credentials@v2
